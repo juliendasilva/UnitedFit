@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/icone_accueil"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/icone_challenges"
+        android:title="@string/title_challenge" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/icone_profil"
+        android:title="@string/title_profile" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/icone_classement"
+        android:title="@string/title_classement" />
+
+</menu>

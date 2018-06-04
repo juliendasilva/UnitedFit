@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UnitedFit: Reach you goals.</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_classement">Classement</string>
+    <string name="title_profile">Profil</string>
+    <string name="title_challenge">Challenges</string>
+    <string name="text_fragment_home_temporary">Vous êtes sur l\'accueil</string>
+    <string name="text_fragment_challenges_temporary">Vous êtes sur les challenges</string>
+    <string name="text_fragment_profile_temporary">Vous êtes sur votre profil</string>
+    <string name="text_fragment_settings_temporary">Vous êtes dans les paramètres</string>
+</resources>

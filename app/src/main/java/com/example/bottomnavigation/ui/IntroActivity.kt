@@ -93,7 +93,8 @@ class IntroActivity : AppCompatActivity() {
     }
 
     private fun launchHomeScreen() {
-        setContentView(R.layout.activity_main)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     //	viewpager change listener

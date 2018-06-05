@@ -53,9 +53,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="2px"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/dot_dark_screen1"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="74dp"
             android:padding="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"

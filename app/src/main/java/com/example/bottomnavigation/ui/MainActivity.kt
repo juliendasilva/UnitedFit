@@ -30,9 +30,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val firstApplicationLaunch = true
-        if (firstApplicationLaunch) {
+        var prefs = getSharedPreferences("com.example.bottomnavigation", MODE_PRIVATE)
+
+        if (prefs.getBoolean("firstrun", true)) {
             runIntro()
+            prefs.edit().putBoolean("firstrun", false).commit()
         } else {
             runApp(savedInstanceState)
         }

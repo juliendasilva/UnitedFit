@@ -67,9 +67,9 @@ class IntroActivity : AppCompatActivity() {
             }
         })
 
-        button1!!.setOnClickListener(View.OnClickListener {
+        // button1!!.setOnClickListener(View.OnClickListener {
             // MainActivity().runApp()
-        })
+        // })
     }
 
     private fun addBottomDots(currentPage: Int) {

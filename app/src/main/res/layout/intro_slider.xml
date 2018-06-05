@@ -52,21 +52,18 @@
     <Button
         android:id="@+id/btn_start"
         android:layout_height="60dp"
-        android:layout_width="fill_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:stateListAnimator="@null"
         android:text="Commencer"
         android:textColor="#ffffff"
-        android:background="@color/highlight" />
+        android:background="@drawable/button" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:padding="10dp"
-        android:text="Buttons"
-        android:textColor="#ffffff" />
+
 
 </RelativeLayout>

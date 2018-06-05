@@ -62,9 +62,11 @@ class IntroActivity : AppCompatActivity() {
             if (current < layouts!!.size) {
                 // move to next screen
                 view_pager!!.currentItem = current
-            } else {
-                launchHomeScreen()
             }
+        })
+
+        btn_start!!.setOnClickListener(View.OnClickListener {
+            launchHomeScreen()
         })
 
         // button1!!.setOnClickListener(View.OnClickListener {

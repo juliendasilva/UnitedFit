@@ -1,5 +1,6 @@
 package com.example.bottomnavigation.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -29,7 +30,22 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val firstApplicationLaunch = true
+        if (firstApplicationLaunch) {
+            runIntro()
+        } else {
+            runApp(savedInstanceState)
+        }
 
+
+    }
+
+    fun runIntro() {
+        val intent = Intent(this, IntroActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun runApp(savedInstanceState: Bundle?) {
         restoreSaveInstanceState(savedInstanceState)
         setContentView(R.layout.activity_main)
         toolbar = findViewById(R.id.toolbar)

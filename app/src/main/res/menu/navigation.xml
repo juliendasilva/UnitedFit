@@ -4,21 +4,21 @@
 
     <item
         android:id="@+id/home"
-        android:icon="@drawable/icone_accueil"
+        android:icon="@drawable/icone_accueil_2x"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/dashboard"
-        android:icon="@drawable/icone_challenges"
+        android:icon="@drawable/icone_challenges_2x"
         android:title="@string/title_challenge" />
 
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/icone_profil"
+        android:icon="@drawable/icone_profil_2x"
         android:title="@string/title_profile" />
     <item
         android:id="@+id/settings"
-        android:icon="@drawable/icone_classement"
+        android:icon="@drawable/icone_classement_2x"
         android:title="@string/title_classement" />
 
 </menu>

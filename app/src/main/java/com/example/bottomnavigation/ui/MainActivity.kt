@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         } else {
             runApp(savedInstanceState)
         }
-
-
     }
 
     fun runIntro() {

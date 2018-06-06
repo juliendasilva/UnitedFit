@@ -103,7 +103,7 @@
             android:textColor="@color/middle_gray" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Créer un compte"

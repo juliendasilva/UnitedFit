@@ -14,8 +14,7 @@ import com.example.bottomnavigation.extension.*
 import com.example.bottomnavigation.helper.*
 import android.support.v4.content.ContextCompat
 import android.view.WindowManager
-
-
+import java.sql.Connection
 
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
@@ -36,12 +35,22 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             runIntro()
             prefs.edit().putBoolean("firstrun", false).commit()
         } else {
-            runApp(savedInstanceState)
+            val isLogged = false
+            if (isLogged) {
+                runApp(savedInstanceState)
+            } else {
+                runConnection()
+            }
         }
     }
 
     fun runIntro() {
         val intent = Intent(this, IntroActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun runConnection() {
+        val intent = Intent(this, connectionActivity::class.java)
         startActivity(intent)
     }
 

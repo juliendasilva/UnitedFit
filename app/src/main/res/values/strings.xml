@@ -27,4 +27,10 @@
     <string name="slide_4_desc">Test your apps for compatibility with Android Oreo. Just download a device system image, install your current app, and test in areas where behavior changes may affect the app. Update your code and publish, using the app\'s current platform targeting.!</string>
     <string name="intro_slider">Android Introduction Slider is basically used to introduce the major features of the application to the user. It also attracts and helps the user to know about the app. It is also called android welcome screen and is used to guide the user on how to use the app just after installation. It is used in almost all popular apps and games these days.
     \n\nTo make the intro slider we will make 3-4 slide screens having swipe gesture facilities with a skip and next navigation buttons. The user can navigate to other welcome screen using swipe gesture or by using the next button. After that, the user can navigate to the home screen or login screen. Intro slider is basically shown once after the installation and after that user directly interact with the home screen. </string>
+    <string name="slide1_title">Participe à des challenges</string>
+    <string name="slide1_description">Créer tes propres challenges ou participe à des challenges publics. Plusieurs catégories sont disponibles : course, pompes, vélo, natation, etc …</string>
+    <string name="slide2_title">Défie tes amis</string>
+    <string name="slide2_description">Invite tes amis à participer à des challenges privés et défies les à se surpasser. Aidez-vous les uns les autres et créez une dynamique de groupe.</string>
+    <string name="slide3_title">Dépasse tes limites</string>
+    <string name="slide3_description">Gagne tous les challenges et surpasse toi. Aucun challenge n’est insurmontable, tu es ta propre limite. C’est parti !</string>
 </resources>

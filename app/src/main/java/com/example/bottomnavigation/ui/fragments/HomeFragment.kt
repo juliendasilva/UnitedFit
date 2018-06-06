@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.bottomnavigation.R
 import com.example.bottomnavigation.ui.item.ChallengeInProgressItem
+import com.example.bottomnavigation.ui.item.InvitationItem
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -29,6 +30,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Display RecyclerView for challenges in progress
+        displayChallengeInProgress(view)
+        displayInvitations(view)
+
+    }
+
+    fun displayChallengeInProgress(view: View) {
         view.recyclerViewChallengeInProgress.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
 
         val itemAdapter = FastItemAdapter<ChallengeInProgressItem>()
@@ -38,7 +46,18 @@ class HomeFragment : Fragment() {
         }
 
         view.recyclerViewChallengeInProgress.adapter = itemAdapter
+    }
 
+    fun displayInvitations(view: View) {
+        view.recyclerViewInvitations.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+
+        val itemAdapter = FastItemAdapter<InvitationItem>()
+
+        for (i in 0..2) {
+            itemAdapter.add(InvitationItem())
+        }
+
+        view.recyclerViewInvitations.adapter = itemAdapter
     }
 
 }

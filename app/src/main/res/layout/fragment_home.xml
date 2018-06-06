@@ -42,7 +42,7 @@
 
     <android.support.v4.widget.Space
         android:id="@+id/marginSpacer"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
@@ -50,17 +50,44 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/constraintLayout" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewChallengeInProgress"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:overScrollMode="never"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/marginSpacer">
 
-    </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewChallengeInProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Invitations"
+            android:textColor="@color/black_classic"
+            android:textSize="24sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewInvitations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

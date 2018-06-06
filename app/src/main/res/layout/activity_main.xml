@@ -35,7 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:elevation="4dp"
+        app:elevation="10dp"
+        android:background="@android:color/white"
         app:itemIconTint="@drawable/selector_bottom_nav"
         app:itemTextColor="@drawable/selector_bottom_nav"
         app:menu="@menu/navigation" />

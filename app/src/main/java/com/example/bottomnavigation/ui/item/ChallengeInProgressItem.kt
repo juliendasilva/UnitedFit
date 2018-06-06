@@ -31,7 +31,7 @@ class ChallengeInProgressItem: AbstractItem<ChallengeInProgressItem, ChallengeIn
 
             // ex : itemView.textViewChallengeInProgressTitle.text = challengeInProgress.title
 
-            itemView.textViewChallengeInProgressTitle.text = "Challenge text"
+            itemView.textViewChallengeInProgressTitle.text = "50 km de marche à pieds"
         }
 
     }

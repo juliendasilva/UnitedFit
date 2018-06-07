@@ -34,13 +34,15 @@ class loginActivity : AppCompatActivity() {
             Fuel.post(path)
                     .responseString { request, response, result ->
                 result.fold({ d ->
-                    class user (val email: String = "", var name: String = "")
+                    class user (val email: String = "", val image: String = "", val name: String = "")
                     val result = Klaxon()
                             .parse<user>(d)
                     Log.d("responsehttp", result!!.name)
                     var prefs = getSharedPreferences("com.example.bottomnavigation", MODE_PRIVATE)
                     prefs.edit().putString("name", result!!.name).commit()
                     prefs.edit().putString("email", result!!.email).commit()
+                    prefs.edit().putString("image", result!!.image).commit()
+                    Log.d("immmm", result!!.image.toString())
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     //Log.d("resres", prefs.getString("name", ""))

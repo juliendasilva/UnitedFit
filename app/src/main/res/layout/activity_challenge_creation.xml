@@ -7,199 +7,229 @@
     android:background="@color/white"
     tools:context=".ui.ChallengeCreationActivity">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/lato_bold"
-        android:text="@string/createChallengeTitle"
-        android:textColor="@color/black_classic"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
-        app:layout_constraintStart_toEndOf="@+id/back_arrow"
-        app:layout_constraintTop_toTopOf="@+id/back_arrow" />
-
-    <Button
-        android:id="@+id/back_arrow"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
-        android:background="@drawable/icone_fleche_rouge_2x"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/nameLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="Nom"
-            android:textColor="@color/black_classic"
-            android:textSize="21dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.025"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-        <EditText
-            android:id="@+id/nameInput"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text"
-            android:ems="10"
-            android:fontFamily="@font/lato_regular"
-            android:hint="50 km de marche à pieds"
-            android:inputType="textCapWords|textPersonName"
-            android:padding="20dp"
-            android:textColor="@color/black_classic"
-            android:textColorHint="@color/middle_gray"
-            android:textColorLink="@color/black_classic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/descriptionLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="Description"
-            android:textColor="@color/black_classic"
-            android:textSize="21dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.025"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/descriptionInput"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text"
-            android:ems="10"
-            android:fontFamily="@font/lato_regular"
-            android:hint="Soyez clair sur votre idée :)"
-            android:inputType="textCapWords|textPassword"
-            android:padding="20dp"
-            android:textColor="@color/black_classic"
-            android:textColorHint="@color/middle_gray"
-            android:textColorLink="@color/black_classic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/categorieLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/category"
-            android:textColor="@color/black_classic"
-            android:textSize="21dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.025"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button5"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/run_full_2x" />
+                    android:id="@+id/back_arrow"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/icone_fleche_rouge_2x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="8dp"
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
                     android:layout_weight="1"
-                    android:background="@drawable/pompes_full_2x"
-                    android:clickable="true"
-                    android:padding="10dp" />
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/createChallengeTitle"
+                    android:textColor="@color/black_classic"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
+                    app:layout_constraintStart_toEndOf="@+id/back_arrow"
+                    app:layout_constraintTop_toTopOf="@+id/back_arrow" />
 
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bike_full_2x" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/squat_full_2x" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/muscu_full_2x" />
+                <TextView
+                    android:id="@+id/nameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Nom"
+                    android:textColor="@color/black_classic"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.025"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <Button
-                    android:id="@+id/button7"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/swim_full_2x" />
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="50 km de marche à pieds"
+                    android:inputType="textCapWords|textPersonName"
+                    android:padding="20dp"
+                    android:textColor="@color/black_classic"
+                    android:textColorHint="@color/middle_gray"
+                    android:textColorLink="@color/black_classic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/descriptionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Description"
+                    android:textColor="@color/black_classic"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.025"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/descriptionInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Soyez clair sur votre idée :)"
+                    android:inputType="textCapWords|textPassword"
+                    android:padding="20dp"
+                    android:textColor="@color/black_classic"
+                    android:textColorHint="@color/middle_gray"
+                    android:textColorLink="@color/black_classic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/categorieLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/category"
+                    android:textColor="@color/black_classic"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.025"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="90dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/run_full_2x" />
+
+                        <Button
+                            android:id="@+id/button6"
+                            android:layout_width="90dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/pompes_full_2x"
+                            android:clickable="true"
+                            android:padding="10dp" />
+
+                        <Button
+                            android:id="@+id/button4"
+                            android:layout_width="90dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bike_full_2x" />
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="90dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/squat_full_2x" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button8"
+                            android:layout_width="90dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/muscu_full_2x" />
+
+                        <Button
+                            android:id="@+id/button7"
+                            android:layout_width="90dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/swim_full_2x" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Valeur"
+                    android:textColor="@color/black_classic"
+                    android:textSize="21sp" />
+
             </LinearLayout>
-        </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

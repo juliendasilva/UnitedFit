@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.bottomnavigation.R
+import com.example.bottomnavigation.ui.item.ActualityItem
 import com.example.bottomnavigation.ui.item.ChallengeInProgressItem
 import com.example.bottomnavigation.ui.item.InvitationItem
 import com.mikepenz.fastadapter.FastAdapter
@@ -33,6 +34,7 @@ class HomeFragment : Fragment() {
         // Display RecyclerView for challenges in progress
         displayChallengeInProgress(view)
         displayInvitations(view)
+        displayActuality(view)
 
     }
 
@@ -53,11 +55,27 @@ class HomeFragment : Fragment() {
 
         val itemAdapter = FastItemAdapter<InvitationItem>()
 
-        for (i in 0..2) {
+        for (i in 0..1) {
             itemAdapter.add(InvitationItem())
         }
 
         view.recyclerViewInvitations.adapter = itemAdapter
+    }
+
+    fun displayActuality(view: View) {
+        view.recyclerViewActuality.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+
+        val itemAdapter = FastItemAdapter<ActualityItem>()
+
+        val items = arrayListOf<ActualityItem>()
+        items.add(ActualityItem("Félicitation !", "Tu as terminé le challenge en seulement 3 jours !"))
+        items.add(ActualityItem("Hey you!", "Bravo, tu t'es connecté deux fois cette semaine."))
+
+        items.forEach({
+            itemAdapter.add(it)
+        })
+
+        view.recyclerViewActuality.adapter = itemAdapter
     }
 
 }

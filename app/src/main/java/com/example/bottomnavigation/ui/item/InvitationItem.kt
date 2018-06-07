@@ -4,7 +4,6 @@ import android.view.View
 import com.example.bottomnavigation.R
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
-import kotlinx.android.synthetic.main.card.view.*
 import kotlinx.android.synthetic.main.card_invitation.view.*
 
 class InvitationItem: AbstractItem<InvitationItem, InvitationItem.InvitationItemViewHolder>() {
@@ -22,7 +21,7 @@ class InvitationItem: AbstractItem<InvitationItem, InvitationItem.InvitationItem
 
     class InvitationItemViewHolder(itemView: View?): FastAdapter.ViewHolder<InvitationItem>(itemView) {
         override fun unbindView(item: InvitationItem?) {
-            itemView.textViewInvitationItemTitle.text = null
+            itemView.textViewActualityItemTitle.text = null
         }
 
         override fun bindView(item: InvitationItem?, payloads: MutableList<Any>?) {
@@ -32,7 +31,7 @@ class InvitationItem: AbstractItem<InvitationItem, InvitationItem.InvitationItem
 
             // ex : itemView.textViewChallengeInProgressTitle.text = challengeInProgress.title
 
-            itemView.textViewInvitationItemTitle.text = "Lucille"
+            itemView.textViewActualityItemTitle.text = "Lucille"
         }
 
     }

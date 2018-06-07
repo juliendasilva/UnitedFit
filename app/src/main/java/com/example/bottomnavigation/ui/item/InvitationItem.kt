@@ -1,6 +1,5 @@
 package com.example.bottomnavigation.ui.item
 
-import android.graphics.drawable.Drawable
 import android.view.View
 import com.example.bottomnavigation.R
 import com.mikepenz.fastadapter.FastAdapter
@@ -9,7 +8,7 @@ import kotlinx.android.synthetic.main.card_invitation.view.*
 
 class InvitationItem(val pseudo: String, val desc: String, val img: Int): AbstractItem<InvitationItem, InvitationItem.InvitationItemViewHolder>() {
     override fun getType(): Int {
-        return R.id.textViewChallengeInProgressTitle
+        return R.id.labelTitle
     }
 
     override fun getViewHolder(v: View?): InvitationItemViewHolder {

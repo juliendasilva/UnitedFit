@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.card_actuality.view.*
 
 class ActualityItem(val title: String, val desc: String): AbstractItem<ActualityItem, ActualityItem.ActualityItemViewHolder>() {
     override fun getType(): Int {
-        return R.id.textViewChallengeInProgressTitle
+        return R.id.labelTitle
     }
 
     override fun getViewHolder(v: View?): ActualityItemViewHolder {

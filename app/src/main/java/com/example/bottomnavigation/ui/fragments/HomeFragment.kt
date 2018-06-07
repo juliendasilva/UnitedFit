@@ -80,9 +80,13 @@ class HomeFragment : Fragment() {
 
         val itemAdapter = FastItemAdapter<ChallengeInProgressItem>()
 
-        for (i in 0..2) {
-            itemAdapter.add(ChallengeInProgressItem())
-        }
+        val items = arrayListOf<ChallengeInProgressItem>()
+        items.add(ChallengeInProgressItem("titre", "3", "50", "km", "15" ))
+        items.add(ChallengeInProgressItem("titre 2", "4", "20", "km", "10" ))
+
+        items.forEach({
+            itemAdapter.add(it)
+        })
 
         view.recyclerViewChallengeInProgress.adapter = itemAdapter
     }

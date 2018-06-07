@@ -44,5 +44,11 @@ dependencies {
     implementation 'com.mikepenz:fastadapter:3.2.6'
     implementation 'com.mikepenz:fastadapter-commons:3.2.6@aar'
 
+    implementation 'com.github.kittinunf.fuel:fuel:1.12.0' //for JVM
+    implementation 'com.github.kittinunf.fuel:fuel-android:1.12.0' //for Android
+    implementation 'com.github.kittinunf.fuel:fuel-gson:1.12.0' //for Gson support
+    implementation 'com.github.kittinunf.fuel:fuel-jackson:1.12.0' //for Jackson support
+
+    implementation 'com.beust:klaxon:3.0.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
 }

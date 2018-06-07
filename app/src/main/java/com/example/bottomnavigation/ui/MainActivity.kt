@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             runIntro()
             prefs.edit().putBoolean("firstrun", false).commit()
         } else {
-            val isLogged = false
+            // TODO --> is logged = false
+            val isLogged = true
             if (isLogged) {
                 runApp(savedInstanceState)
             } else {

@@ -1,8 +1,12 @@
 package com.example.bottomnavigation.ui.fragments
 
+import android.content.Context
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.support.annotation.DrawableRes
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -61,12 +65,28 @@ class HomeFragment : Fragment() {
 
         val itemAdapter = FastItemAdapter<InvitationItem>()
 
-        for (i in 0..1) {
-            itemAdapter.add(InvitationItem())
-        }
+        val items = arrayListOf<InvitationItem>()
+        items.add(InvitationItem("Lucille", "100 pompes à un doigt", R.drawable.profil_lucille))
+        items.add(InvitationItem("Veronique", "200 abdos tous les jours", R.drawable.profil_vero))
+
+        items.forEach({
+            itemAdapter.add(it)
+        })
 
         view.recyclerViewInvitations.adapter = itemAdapter
     }
+
+
+    fun getDrawable(@DrawableRes res:Int): Drawable? {
+        val currentContext = context
+
+        if(currentContext is Context) {
+            return ContextCompat.getDrawable(currentContext, res)
+        }
+
+        return null
+    }
+
 
     fun displayActuality(view: View) {
         view.recyclerViewActuality.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);

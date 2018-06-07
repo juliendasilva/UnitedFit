@@ -67,9 +67,13 @@ class HomeFragment : Fragment() {
 
         val itemAdapter = FastItemAdapter<ActualityItem>()
 
-        for (i in 0..1) {
-            itemAdapter.add(ActualityItem())
-        }
+        val items = arrayListOf<ActualityItem>()
+        items.add(ActualityItem("Félicitation !", "Tu as terminé le challenge en seulement 3 jours !"))
+        items.add(ActualityItem("Hey you!", "Bravo, tu t'es connecté deux fois cette semaine."))
+
+        items.forEach({
+            itemAdapter.add(it)
+        })
 
         view.recyclerViewActuality.adapter = itemAdapter
     }

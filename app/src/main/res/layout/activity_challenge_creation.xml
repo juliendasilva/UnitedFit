@@ -227,6 +227,49 @@
                     android:textColor="@color/black_classic"
                     android:textSize="21sp" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/numberOfUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text"
+                        android:ems="10"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="50"
+                        android:inputType="textCapWords|textPersonName"
+                        android:padding="20dp"
+                        android:textColor="@color/black_classic"
+                        android:textColorHint="@color/middle_gray"
+                        android:textColorLink="@color/black_classic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/uniteType"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text"
+                        android:fontFamily="@font/lato_regular"
+                        android:padding="20dp"
+                        android:text="km"
+                        android:textColor="@color/middle_gray"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toTopOf="@+id/editText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.025"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>

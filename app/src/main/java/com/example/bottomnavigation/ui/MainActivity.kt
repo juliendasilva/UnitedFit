@@ -13,6 +13,7 @@ import com.example.bottomnavigation.R
 import com.example.bottomnavigation.extension.*
 import com.example.bottomnavigation.helper.*
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.WindowManager
 import java.sql.Connection
 
@@ -35,11 +36,15 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             runIntro()
             prefs.edit().putBoolean("firstrun", false).commit()
         } else {
+            val email = prefs.getString("email", "")
+
             val isLogged = false
-            if (isLogged) {
-                runApp(savedInstanceState)
-            } else {
+            if (email === "") {
+                Log.d("bugs", "connection")
                 runConnection()
+            } else {
+                Log.d("bugs", "app")
+                runApp(savedInstanceState)
             }
         }
     }

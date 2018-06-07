@@ -159,7 +159,7 @@
         app:layout_constraintVertical_bias="0.917"
         tools:layout_editor_absoluteX="0dp" />
 
-    <ImageView
+    <Button
         android:id="@+id/previous"
         android:layout_width="32dp"
         android:layout_height="33dp"
@@ -167,7 +167,7 @@
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icone_fleche_rouge_2x" />
+        android:background="@drawable/icone_fleche_rouge_2x" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         card_view:cardUseCompatPadding="true"
         card_view:cardElevation="1dp"
-        card_view:cardCornerRadius="3dp">
+        card_view:cardCornerRadius="3dp"
+        android:clickable="false" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,8 +57,9 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="40dp"
-
                 card_view:backgroundTint="@color/highlight"
+                android:src="@drawable/validate_shape"
+
                 card_view:srcCompat="@drawable/validate_shape" />
 
             <android.support.design.widget.FloatingActionButton
@@ -65,7 +67,6 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="8dp"
-
                 card_view:backgroundTint="@color/light_gray"
                 card_view:srcCompat="@drawable/refuse_shape" />
 

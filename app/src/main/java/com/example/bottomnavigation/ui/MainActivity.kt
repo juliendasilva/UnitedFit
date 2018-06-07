@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         if (prefs.getBoolean("firstrun", true)) {
             runIntro()
-            prefs.edit().putBoolean("firstrun", false).commit()
+            // prefs.edit().putBoolean("firstrun", false).commit()
         } else {
             val email = prefs.getString("email", "")
             if (email === "") {

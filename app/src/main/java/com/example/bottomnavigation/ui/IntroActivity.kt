@@ -95,6 +95,8 @@ class IntroActivity : AppCompatActivity() {
     }
 
     private fun launchHomeScreen() {
+        var prefs = getSharedPreferences("com.example.bottomnavigation", MODE_PRIVATE)
+        prefs.edit().putBoolean("firstrun", false).commit()
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }

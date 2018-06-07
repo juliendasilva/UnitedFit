@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,8 @@ import com.example.bottomnavigation.ui.item.ChallengeInProgressItem
 import com.example.bottomnavigation.ui.item.InvitationItem
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
+import com.squareup.picasso.Callback
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
@@ -42,6 +45,23 @@ class HomeFragment : Fragment() {
         var prefs = this.getActivity()!!.getSharedPreferences("com.example.bottomnavigation", AppCompatActivity.MODE_PRIVATE)
         val name = prefs.getString("name", "")
         welcomeMessage.text = "Bonjour $name"
+
+        val image = prefs.getString("image", "")
+        Log.d("image", image)
+        if (image !== "") {
+            Picasso.with(context)
+                    .load(image)
+                    .into(profileImage, object : Callback {
+                        override fun onError() {
+
+                        }
+
+                        override fun onSuccess() {
+                            Log.d("success", "success")
+                            profileImage.setBackgroundResource(R.drawable.round_image_background )
+                        }
+                    })
+        }
 
         // Display RecyclerView for challenges in progress
         displayChallengeInProgress(view)

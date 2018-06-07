@@ -37,8 +37,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             prefs.edit().putBoolean("firstrun", false).commit()
         } else {
             val email = prefs.getString("email", "")
-            // TODO --> is logged = false
-            val isLogged = false
             if (email === "") {
                 Log.d("bugs", "connection")
                 runConnection()

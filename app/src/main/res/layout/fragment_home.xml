@@ -94,23 +94,16 @@
 
                     </android.support.v7.widget.RecyclerView>
 
-                    <Button
-                        android:id="@+id/button4"
+                    <TextView
+                        android:id="@+id/textView3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Button" />
-
-                    <Button
-                        android:id="@+id/button4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
-
-                    <Button
-                        android:id="@+id/button4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Actualités"
+                        android:textColor="@color/black_classic"
+                        android:textSize="24sp" />
 
                 </LinearLayout>
 

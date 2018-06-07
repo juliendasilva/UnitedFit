@@ -1,12 +1,13 @@
 package com.example.bottomnavigation.ui.item
 
+import android.graphics.drawable.Drawable
 import android.view.View
 import com.example.bottomnavigation.R
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
 import kotlinx.android.synthetic.main.card_invitation.view.*
 
-class InvitationItem: AbstractItem<InvitationItem, InvitationItem.InvitationItemViewHolder>() {
+class InvitationItem(val pseudo: String, val desc: String, val img: Int): AbstractItem<InvitationItem, InvitationItem.InvitationItemViewHolder>() {
     override fun getType(): Int {
         return R.id.textViewChallengeInProgressTitle
     }
@@ -21,7 +22,8 @@ class InvitationItem: AbstractItem<InvitationItem, InvitationItem.InvitationItem
 
     class InvitationItemViewHolder(itemView: View?): FastAdapter.ViewHolder<InvitationItem>(itemView) {
         override fun unbindView(item: InvitationItem?) {
-            itemView.textViewActualityItemTitle.text = null
+            itemView.textViewInvitationItemPseudo.text = null
+            itemView.textViewInvitationItemDesc.text = null
         }
 
         override fun bindView(item: InvitationItem?, payloads: MutableList<Any>?) {
@@ -31,7 +33,9 @@ class InvitationItem: AbstractItem<InvitationItem, InvitationItem.InvitationItem
 
             // ex : itemView.textViewChallengeInProgressTitle.text = challengeInProgress.title
 
-            itemView.textViewActualityItemTitle.text = "Lucille"
+            itemView.textViewInvitationItemPseudo.text = item?.pseudo
+            itemView.textViewInvitationItemDesc.text = item?.desc
+            itemView.profilImage.setImageResource(item!!.img)
         }
 
     }

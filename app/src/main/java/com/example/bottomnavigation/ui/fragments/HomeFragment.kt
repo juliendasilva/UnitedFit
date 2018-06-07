@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
 
         var prefs = this.getActivity()!!.getSharedPreferences("com.example.bottomnavigation", AppCompatActivity.MODE_PRIVATE)
         val name = prefs.getString("name", "")
-        welcomeMessage.text = "Bonjour $name"
+        labelName.text = name
 
         val image = prefs.getString("image", "")
         Log.d("image", image)

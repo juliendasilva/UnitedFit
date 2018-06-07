@@ -2,6 +2,7 @@ package com.example.bottomnavigation.ui.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import com.example.bottomnavigation.ui.item.ChallengeInProgressItem
 import com.example.bottomnavigation.ui.item.InvitationItem
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
@@ -30,6 +32,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        var prefs = this.getActivity()!!.getSharedPreferences("com.example.bottomnavigation", AppCompatActivity.MODE_PRIVATE)
+        val name = prefs.getString("name", "")
+        welcomeMessage.text = "Bonjour $name"
 
         // Display RecyclerView for challenges in progress
         displayChallengeInProgress(view)

@@ -27,7 +27,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/welcomeMessage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -45,9 +45,9 @@
                     android:layout_width="59dp"
                     android:layout_height="58dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                    app:layout_constraintBottom_toBottomOf="@+id/welcomeMessage"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="@+id/welcomeMessage"
                     app:srcCompat="@drawable/profil_julien" />
             </android.support.constraint.ConstraintLayout>
 

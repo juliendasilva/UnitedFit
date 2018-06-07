@@ -41,6 +41,8 @@ class loginActivity : AppCompatActivity() {
                     var prefs = getSharedPreferences("com.example.bottomnavigation", MODE_PRIVATE)
                     prefs.edit().putString("name", result!!.name).commit()
                     prefs.edit().putString("email", result!!.email).commit()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                     //Log.d("resres", prefs.getString("name", ""))
                     //do something with data
                 }, { err ->

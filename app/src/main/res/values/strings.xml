@@ -33,4 +33,6 @@
     <string name="slide2_description">Invite tes amis à participer à des challenges privés et défies les à se surpasser. Aidez-vous les uns les autres et créez une dynamique de groupe.</string>
     <string name="slide3_title">Dépasse tes limites</string>
     <string name="slide3_description">Gagne tous les challenges et surpasse toi. Aucun challenge n’est insurmontable, tu es ta propre limite. C’est parti !</string>
+    <string name="createChallengeTitle">Créer un challenge</string>
+    <string name="category">Categorie</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.bottomnavigation.ui.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.annotation.DrawableRes
@@ -13,6 +14,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.bottomnavigation.R
+import com.example.bottomnavigation.ui.ChallengeCreationActivity
 import com.example.bottomnavigation.ui.item.ActualityItem
 import com.example.bottomnavigation.ui.item.ChallengeInProgressItem
 import com.example.bottomnavigation.ui.item.InvitationItem
@@ -65,6 +67,11 @@ class HomeFragment : Fragment() {
         displayChallengeInProgress(view)
         displayInvitations(view)
         displayActuality(view)
+
+        addChallenge_button.setOnClickListener(View.OnClickListener{
+            val intent = Intent(activity, ChallengeCreationActivity::class.java)
+            startActivity(intent)
+        })
 
     }
 

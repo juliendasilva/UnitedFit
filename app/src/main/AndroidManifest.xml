@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bottomnavigation">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +21,8 @@
         <activity android:name=".ui.IntroActivity" />
         <activity android:name=".ui.connectionActivity" />
         <activity android:name=".ui.loginActivity" />
-        <activity android:name=".ui.signinActivity"></activity>
+        <activity android:name=".ui.signinActivity" />
+        <activity android:name=".ui.ChallengeCreationActivity"></activity>
     </application>
 
 </manifest>

@@ -36,6 +36,7 @@ class InvitationItem(val pseudo: String, val desc: String, val img: Int): Abstra
             itemView.textViewInvitationItemPseudo.text = item?.pseudo
             itemView.textViewInvitationItemDesc.text = item?.desc
             itemView.profilImage.setImageResource(item!!.img)
+            //itemView.button2.setImageResource(R.drawable.validate_shape)
         }
 
     }

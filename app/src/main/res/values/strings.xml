@@ -35,4 +35,10 @@
     <string name="slide3_description">Gagne tous les challenges et surpasse toi. Aucun challenge n’est insurmontable, tu es ta propre limite. C’est parti !</string>
     <string name="createChallengeTitle">Créer un challenge</string>
     <string name="category">Categorie</string>
+    <string name="status">Status</string>
+    <string name="free">Public</string>
+    <string name="restricted">Privé</string>
+    <string name="challengers">Participants</string>
+    <string name="add_challengers">Ajouter des participants</string>
+    <string name="add_new_challenge">Créer un challenge</string>
 </resources>

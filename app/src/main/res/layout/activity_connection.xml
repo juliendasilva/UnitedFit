@@ -44,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/lato_regular"
-        android:text="Révèle toi à"
+        android:text="@string/r_v_le_toi"
         android:textColor="@color/white"
         android:textSize="26dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="72dp"
         android:fontFamily="@font/lato_regular"
-        android:text="chaque challenge !"
+        android:text="@string/chaque_challenge"
         android:textColor="@color/white"
         android:textSize="26dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,14 +99,14 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Pas encore inscrit ?  "
+            android:text="@string/pas_encore_inscrit"
             android:textColor="@color/middle_gray" />
 
         <TextView
             android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Créer un compte"
+            android:text="@string/cr_er_un_compte"
             android:textColor="@color/highlight" />
     </LinearLayout>
 

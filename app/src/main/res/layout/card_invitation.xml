@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato_regular"
-                    android:text="100 pompes à un doigt" />
+                    android:text="@string/_100_pompes_un_doigt" />
             </LinearLayout>
 
             <android.support.design.widget.FloatingActionButton

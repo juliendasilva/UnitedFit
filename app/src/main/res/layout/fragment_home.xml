@@ -33,7 +33,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="64dp"
                     android:fontFamily="@font/lato_bold"
-                    android:text="Bonjour"
+                    android:text="@string/bonjour"
                     android:textColor="@color/white"
                     android:textSize="35sp"
                     android:textStyle="bold"
@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/lato_bold"
-                    android:text="Name"
+                    android:text="@string/name"
                     android:textColor="@color/white"
                     android:textSize="35sp"
                     android:textStyle="bold"
@@ -96,7 +96,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/lato_bold"
-                        android:text="Invitations"
+                        android:text="@string/invitations"
                         android:textColor="@color/black_classic"
                         android:textSize="24sp" />
 
@@ -117,7 +117,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/lato_bold"
-                        android:text="Actualités"
+                        android:text="@string/actualit_s"
                         android:textColor="@color/black_classic"
                         android:textSize="24sp" />
 

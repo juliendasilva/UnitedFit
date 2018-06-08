@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="km"
+                    android:text="@string/km"
                     android:textColor="@color/middle_gray"
                     app:layout_constraintStart_toEndOf="@+id/imageView15"
                     app:layout_constraintTop_toBottomOf="@+id/totalUnitValue" />
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="jours"
+                    android:text="@string/jours"
                     android:textColor="@color/middle_gray"
                     app:layout_constraintStart_toEndOf="@+id/imageView5"
                     app:layout_constraintTop_toBottomOf="@+id/totalDaysValue" />
@@ -143,7 +143,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="5dp"
-                android:text="3 jours restants"
+                android:text="@string/_3_jours_restants"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -155,7 +155,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/lato_bold"
-                android:text="50 km de marche à pieds"
+                android:text="@string/_50_km_de_marche_pieds"
                 android:textColor="@color/black_classic"
                 android:textSize="24sp"
                 android:textStyle="bold"

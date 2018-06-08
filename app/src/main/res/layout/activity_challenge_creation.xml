@@ -215,6 +215,22 @@
                             android:layout_marginRight="12dp"
                             android:layout_weight="1"
                             android:background="@drawable/swim_full_2x" />
+
+                        <Button
+                            android:id="@+id/button10"
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="1"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/button9"
+                            android:layout_width="90dp"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="1"
+                            android:visibility="invisible" />
                     </LinearLayout>
                 </LinearLayout>
 

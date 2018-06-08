@@ -40,7 +40,6 @@ class ChallengeCreationActivity : AppCompatActivity() {
         // Dans le deuxieme layout, il ne faut s'interesser qu'au deux premier enfants.
 
 
-            Log.d("LISTEN CLICK", "Click has been listened")
             for (i in 0..(layoutCategoriesLineOne.childCount - 1)) {
                 val currentCategorie = layoutCategoriesLineOne.getChildAt(i)
                 if (currentCategorie != null) {

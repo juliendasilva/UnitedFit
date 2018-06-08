@@ -68,10 +68,6 @@ class IntroActivity : AppCompatActivity() {
         btn_start!!.setOnClickListener(View.OnClickListener {
             launchHomeScreen()
         })
-
-        // button1!!.setOnClickListener(View.OnClickListener {
-            // MainActivity().runApp()
-        // })
     }
 
     private fun addBottomDots(currentPage: Int) {

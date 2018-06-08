@@ -41,12 +41,8 @@ class signinActivity : AppCompatActivity() {
                             prefs.edit().putString("email", result!!.email).commit()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
-                            //Log.d("resres", prefs.getString("name", ""))
-                            //do something with data
                         }, { err ->
                             notValid.visibility = View.VISIBLE
-                            Log.d("responsehttp", err.toString())
-                            //do something with error
                         })
                     }
         })

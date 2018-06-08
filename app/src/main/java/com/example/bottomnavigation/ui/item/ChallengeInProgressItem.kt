@@ -2,6 +2,7 @@ package com.example.bottomnavigation.ui.item
 
 import android.view.View
 import com.example.bottomnavigation.R
+import com.fasterxml.jackson.databind.util.ClassUtil.getPackageName
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
 import kotlinx.android.synthetic.main.card.view.*
@@ -12,7 +13,8 @@ class ChallengeInProgressItem(
         val daysLeft: String,
         val totalUnitValue: String,
         val unitType: String,
-        val totalDays: String)
+        val totalDays: String,
+        val image: String)
     : AbstractItem<ChallengeInProgressItem, ChallengeInProgressItem.ChallengeInProgressViewHolder>() {
     override fun getType(): Int {
         return R.id.labelTitle
@@ -33,8 +35,7 @@ class ChallengeInProgressItem(
             itemView.totalUnitValue.text = null
             itemView.unitType.text = null
             itemView.totalDaysValue.text = null
-
-
+            itemView.imageView15.background = null
         }
 
         override fun bindView(item: ChallengeInProgressItem?, payloads: MutableList<Any>?) {
@@ -49,6 +50,9 @@ class ChallengeInProgressItem(
             itemView.totalUnitValue.text = item?.totalUnitValue
             itemView.unitType.text = item?.unitType
             itemView.totalDaysValue.text = item?.totalDays
+            //itemView.imageView15.background = R.drawable.card_felicitations
+            //itemView.imageView15.setImageResource(R.drawable[item?.image])
+            //itemView.imageView15.setImageResource(getResources().getIdentifier(item?.image, "drawable", getPackageName())) // TODO à fixer
         }
 
     }

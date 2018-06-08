@@ -9,23 +9,19 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.beust.klaxon.Klaxon
 import com.example.bottomnavigation.R
 import com.example.bottomnavigation.ui.ChallengeCreationActivity
-import com.example.bottomnavigation.ui.MainActivity
 import com.example.bottomnavigation.ui.item.ActualityItem
 import com.example.bottomnavigation.ui.item.ChallengeInProgressItem
 import com.example.bottomnavigation.ui.item.InvitationItem
 import com.github.kittinunf.fuel.Fuel
-import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
@@ -51,7 +47,6 @@ class HomeFragment : Fragment() {
         labelName.text = name
 
         val image = prefs.getString("image", "")
-        Log.d("image", image)
         if (image !== "") {
             Picasso.with(context)
                     .load(image)
@@ -61,7 +56,6 @@ class HomeFragment : Fragment() {
                         }
 
                         override fun onSuccess() {
-                            Log.d("success", "success")
                             profileImage.setBackgroundResource(R.drawable.round_image_background )
                         }
                     })
@@ -81,40 +75,44 @@ class HomeFragment : Fragment() {
 
     fun displayChallengeInProgress(view: View) {
         view.recyclerViewChallengeInProgress.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
-        Log.d("wesh", "wesh")
-        val itemAdapter = FastItemAdapter<ChallengeInProgressItem>()
-
-        val items = arrayListOf<ChallengeInProgressItem>()
-        items.add(ChallengeInProgressItem("jul", "3", "50", "km", "15" ))
-        items.add(ChallengeInProgressItem("titre 2", "4", "20", "km", "10" ))
-
-        items.forEach({
-            itemAdapter.add(it)
-        })
-
-        view.recyclerViewChallengeInProgress.adapter = itemAdapter
 
         var prefs = this.getActivity()!!.getSharedPreferences("com.example.bottomnavigation", AppCompatActivity.MODE_PRIVATE)
         val email = prefs.getString("email", "")
         val path = "http://stark-temple-99246.herokuapp.com/users/$email"
+
+        val itemAdapter = FastItemAdapter<ChallengeInProgressItem>()
+        itemAdapter.add(ChallengeInProgressItem("", "", "", "", "", "icone_course_2x" ))
+        view.recyclerViewChallengeInProgress.adapter = itemAdapter
+
         Fuel.get(path)
                 .responseString { request, response, result ->
                     result.fold({ d ->
-                        class challenge (val name: String = "")
+                        class challenge (val name: String = "", val value: Number = 0, val unit: String = "", val category: String = "", val nbDays: Number = 0, val daysLeft: Number = 0)
                         class user (val email: String = "", val challenges: List<challenge> = arrayListOf<challenge>(), val name: String = "")
-                        val result = Klaxon().parse<user>(d)
+                        val test = Klaxon().parse<user>(d)
+                        val itemAdapter = FastItemAdapter<ChallengeInProgressItem>()
 
-                        //result.forEach({
-                            //itemAdapter.add(it)
-                        //})
-                        Log.d("immmm", result!!.challenges[0].name)
-                        //Log.d("resres", prefs.getString("name", ""))
-                        //do something with data
+                        test!!.challenges.forEach({
+                            itemAdapter.add(ChallengeInProgressItem(it.name, it.daysLeft.toString(), it.value.toString(), it.unit, it.nbDays.toString(), getImageNameFromCategory(it.category) ))
+                        })
+                        view.recyclerViewChallengeInProgress.adapter = itemAdapter
                     }, { err ->
-                        Log.d("responsehttp", "fuck")
                         //do something with error
                     })
                 }
+    }
+
+    fun getImageNameFromCategory (activityName: String): String {
+        var image : String = ""
+        when (activityName) {
+            "RUN" -> image = "categorie_course_2x"
+            "PUSH_UP" -> image = "categorie_pompes_2x"
+            "BIKE" -> image = "categorie_velo_2x"
+            "SQUAT" -> image = "categorie_squats_2x"
+            "WEIGHTLIFTING" -> image = "categorie_halteres_2x"
+            "SWIM" -> image = "categorie_natation_2x"
+        }
+        return image
     }
 
     fun displayInvitations(view: View) {

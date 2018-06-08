@@ -21,8 +21,8 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/header_home"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:background="@color/primary"
+                android:layout_height="250dp"
+                android:background="@drawable/bg_header_x2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -39,6 +39,19 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/labelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/welcomeMessage"
+                    app:layout_constraintStart_toEndOf="@+id/welcomeMessage" />
 
                 <ImageView
                     android:id="@+id/profileImage"
@@ -125,7 +138,7 @@
                 android:id="@+id/marginSpacer"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="48dp"
+                android:layout_marginBottom="84dp"
                 app:layout_constraintBottom_toBottomOf="@+id/header_home"
                 app:layout_constraintEnd_toEndOf="@id/header_home"
                 app:layout_constraintHorizontal_bias="0.0"

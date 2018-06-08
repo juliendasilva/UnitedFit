@@ -134,17 +134,6 @@ class HomeFragment : Fragment() {
     }
 
 
-    fun getDrawable(@DrawableRes res:Int): Drawable? {
-        val currentContext = context
-
-        if(currentContext is Context) {
-            return ContextCompat.getDrawable(currentContext, res)
-        }
-
-        return null
-    }
-
-
     fun displayActuality(view: View) {
         view.recyclerViewActuality.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
 

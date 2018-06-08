@@ -51,13 +51,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imageView15"
                     android:layout_width="37dp"
                     android:layout_height="33dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/icone_course_2x" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/unitType"
@@ -67,7 +66,7 @@
                     android:fontFamily="@font/lato_regular"
                     android:text="km"
                     android:textColor="@color/middle_gray"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView15"
                     app:layout_constraintTop_toBottomOf="@+id/totalUnitValue" />
 
                 <TextView
@@ -79,8 +78,8 @@
                     android:text="50"
                     android:textColor="@color/black_classic"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView15"
+                    app:layout_constraintTop_toTopOf="@+id/imageView15" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout

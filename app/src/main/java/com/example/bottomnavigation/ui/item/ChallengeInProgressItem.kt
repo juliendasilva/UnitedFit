@@ -35,7 +35,6 @@ class ChallengeInProgressItem(
             itemView.totalUnitValue.text = null
             itemView.unitType.text = null
             itemView.totalDaysValue.text = null
-            itemView.imageView15.background = null
         }
 
         override fun bindView(item: ChallengeInProgressItem?, payloads: MutableList<Any>?) {

@@ -158,7 +158,7 @@
                 android:fontFamily="@font/lato_bold"
                 android:text="@string/_50_km_de_marche_pieds"
                 android:textColor="@color/black_classic"
-                android:textSize="24sp"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelDaysLeft" />

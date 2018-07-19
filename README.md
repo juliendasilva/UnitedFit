@@ -1,6 +1,6 @@
-![Home page](https://raw.githubusercontent.com/Alexandre-cibot/UnitedFit/master/Maquettes/UnitedFit.jpg)
+![Home page](https://raw.githubusercontent.com/juliendasilva/UnitedFit/master/Maquettes/UnitedFit.jpg)
 
-[The project presentation is available here](https://github.com/Alexandre-cibot/UnitedFit/blob/master/UnitedFit_Presentation.pdf)
+[The project presentation is available here](https://github.com/juliendasilva/UnitedFit/blob/master/UnitedFit_Presentation.pdf)
 
 ## Context
 

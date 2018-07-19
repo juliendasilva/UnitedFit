@@ -1,8 +1,17 @@
-# Bottom Navigation
-This application is example of how to use [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html).
+![Home page](https://raw.githubusercontent.com/Alexandre-cibot/UnitedFit/master/Maquettes/UnitedFit.jpg)
+
+[The project presentation is available here](https://github.com/Alexandre-cibot/UnitedFit/blob/master/UnitedFit_Presentation.pdf)
+
+## Context
+
+The use of sports applications has increased 62% since 2014. Many are presented as routine exercises. But users are alone with their goals and their desires. Often, they become demotivated and give up, and the application is finally removed.
+
+## Project
+
+UnitedFit is part of a desire to stimulate positive competitiveness and play on group dynamics, so that users encourage each other to achieve challenges. The goal is to surpass yourself through a common goal.
+
 * This app is implemented in Kotlin
-* Disable BottomNavigationView shift mode.  
-![screenshot](docs/screenshot.png)
+* Build with Android Studio 3.0
 
 ## Prerequisites
 * Android SDK 26
@@ -11,14 +20,8 @@ This application is example of how to use [BottomNavigationView](https://develop
 * Android Plugin for Gradle 3.0.1
 * Kotlin v1.1.51
 
-## Getting Started
-Build with Android Studio 3.0
+## Contributors
 
-### ProGuard
-You need to configure proguard-rules.pro file if you want use ProGuard. Such as below:   
+https://github.com/juliendasilva
 
-```
--keepclassmembers class android.support.design.internal.BottomNavigationMenuView { 
-    boolean mShiftingMode; 
-}
-```
+https://github.com/Alexandre-cibot

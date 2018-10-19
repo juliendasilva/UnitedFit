@@ -4,6 +4,8 @@
 
 ## Context
 
+[![GuardRails badge](https://badges.production.guardrails.io/juliendasilva/UnitedFit.svg)](https://www.guardrails.io)
+
 The use of sports applications has increased 62% since 2014. Many are presented as routine exercises. But users are alone with their goals and their desires. Often, they become demotivated and give up, and the application is finally removed.
 
 ## Project

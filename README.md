@@ -2,8 +2,7 @@
 
 [The project presentation is available here](https://github.com/juliendasilva/UnitedFit/blob/master/UnitedFit_Presentation.pdf)
 
-[The InVision app is available here]
-(https://projects.invisionapp.com/share/37KIH26EFUB#/screens)
+[The InVision app is available here](https://projects.invisionapp.com/share/37KIH26EFUB#/screens)
 
 ## Context
 
